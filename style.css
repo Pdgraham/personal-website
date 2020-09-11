@@ -1,3 +1,7 @@
+html {
+	height: 100%;
+}
+
 body {
 	color: #483D8B;
 	background-color: #F0F8FF;
@@ -6,9 +10,10 @@ body {
 	font-weight: normal;
 	margin: 0;
 	line-height: 1.6em;
+	height: 100%;
 }
 
-body::after {
+/* body::after {
   background: url(./images/abstractBackground.jpg);
   content: "";
   opacity: 0.2;
@@ -18,6 +23,56 @@ body::after {
   right: 0;
   left: 0;
   z-index: -1;   
+} */
+
+
+body, html {
+	height: 100%;
+	margin: 0;
+	font: 400 15px/1.8 "Lato", sans-serif;
+	color: #777;
+  }
+  
+.bgimg-1, .bgimg-2, .bgimg-3 {
+	position: relative;
+	opacity: 0.65;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.bgimg-1 {
+	background-image: url("./images/trainStationPhoto.jpg");
+	min-height: 100%;
+}
+
+.bgimg-2 {
+	background-image: url("./images/morrocoTower.jpg");
+	min-height: 600px;
+}
+
+.bgimg-3 {
+	background-image: url("./images/bostonOfficeSnow.jpg");
+	min-height: 600px;
+}
+
+.break {
+	position: relative;
+}
+
+.break-text-1 {
+	color: #ddd;
+	background-color: #282E34;
+	text-align: center;
+	padding: 50px 80px;
+	text-align: justify;
+}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1024px) {
+	.bgimg-1, .bgimg-2, .bgimg-3 {
+		background-attachment: scroll;
+	}
 }
 
 #background-image {
@@ -32,7 +87,7 @@ body::after {
 }
 
 #main-header {
-	background-color: coral;
+	background-color: #483D8B;
 	color: white;
 	text-align: center;
 	opacity: 100%;
@@ -63,9 +118,7 @@ body::after {
 	color: #fff;
 	text-align: center;
 	padding-top: 5px;
-	margin-top: 20px;
 	width: 100%;
   	position: absolute;
-  	bottom: 0;
 }
 
